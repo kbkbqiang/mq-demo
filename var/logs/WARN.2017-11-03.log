@@ -1,0 +1,33 @@
+[WARN ] [2017-11-03 13:58:56.684] [org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler#handleError:73] :Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.listener.exception.ListenerExecutionFailedException: Listener threw exception
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.wrapToListenerExecutionFailedExceptionIfNeeded(AbstractMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:851)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:771)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$001(SimpleMessageListenerContainer.java:102)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$1.invokeListener(SimpleMessageListenerContainer.java:198)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.invokeListener(SimpleMessageListenerContainer.java:1311)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:752)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1224)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:102)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1470)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.adapter.ReplyFailureException: Failed to send reply with payload '1'
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.handleResult(AbstractAdaptableMessageListener.java:285)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:108)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:848)
+	... 10 common frames omitted
+Caused by: org.springframework.amqp.AmqpException: Cannot determine ReplyTo message property value: Request message does not contain reply-to property, and no default response Exchange was set.
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.getReplyToAddress(AbstractAdaptableMessageListener.java:373)
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.handleResult(AbstractAdaptableMessageListener.java:281)
+	... 12 common frames omitted
+[WARN ] [2017-11-03 17:29:41.832] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:35:45.918] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:44:11.150] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:45:40.009] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:46:39.505] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:47:54.634] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:53:13.776] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:55:04.181] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:58:37.572] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)
+[WARN ] [2017-11-03 17:59:28.355] [com.rabbitmq.client.impl.ForgivingExceptionHandler#log:120] :An unexpected connection driver error occured (Exception message: Connection reset)

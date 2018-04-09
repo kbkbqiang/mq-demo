@@ -1,0 +1,22 @@
+spring:
+  rabbitmq:
+    host: 192.168.18.109
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 5
+        max-concurrency: 10
+    template:
+      mandatory: true
+    publisher-confirms: true
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/dev?useUnicode=true&characterEncoding=utf-8&useSSL=false"
+    username: root
+    password: zhangwanli99
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
